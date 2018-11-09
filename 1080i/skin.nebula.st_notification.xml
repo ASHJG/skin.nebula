@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1100" type="dialog">
+  <defaultcontrol always="false">122</defaultcontrol>
+  <menucontrol>9000</menucontrol>
+  <backgroundcolor>0</backgroundcolor>
+ <animation effect="slide" start="-400,0" time="550">WindowOpen</animation>
+  <animation effect="slide" end="400,0" time="500">WindowClose</animation>
+  <zorder>1</zorder>
+  <coordinates>
+    <left>40</left>
+    <top>0</top>
+    <origin x="100" y="50">Window.IsActive(Home)</origin>
+  </coordinates>
+<controls>
+		<width>450</width>
+		<height>1100</height>
+		<control type="group" id="1150">
+		<control type="image">
+            <include>OverlayTransparency</include>
+            <posx>-60</posx>
+            <posy>0</posy>
+            <width>450</width>
+            <height>1100</height>
+            <colordiffuse>$VAR[Picked.Theme.Color]</colordiffuse>
+            <texture>special://skin/backgrounds/default/$VAR[Theme.Color].png</texture>
+        </control>
+		<control type="textbox">
+			<font>InfoPlotFont</font>
+            <posx>-25</posx>
+            <posy>10</posy>
+            <width>400</width>
+            <height>100</height>
+            <include>TextColor_MainColor</include>
+            <label>You were asked to be reminded...</label>
+        </control>
+			<control type="image" id="1156">
+            <left>40</left>
+            <top>150</top>
+            <width>250</width>
+            <height>160</height>
+            <aspectratio>keep</aspectratio>
+            <texture></texture>
+        </control>
+		
+		<control type="textbox" id="1151">
+            <left>-18</left>
+            <top>330</top>
+            <width>400</width>
+            <height>300</height>
+            <align>left</align>
+            <aligny>top</aligny>
+            <font>font13</font>
+        </control>
+		<control type="textbox">
+            <left>-18</left>
+            <top>610</top>
+            <width>200</width>
+            <height>300</height>
+            <align>left</align>
+            <aligny>top</aligny>
+            <font>font12</font>
+			<label>Changing in:</label>
+        </control>
+	    <control type="progress" id="1155">
+                <left>-18</left>
+                <top>660</top>
+                <width>320</width>
+                <height>20</height>
+				<texturebg>white/OSD/osd_progress_background.png</texturebg>
+				<midtexture>white/OSD/osd_progress_mid.png</midtexture>
+	    </control>
+	<control type="grouplist">
+            <posx>-60</posx>
+            <posy>900</posy>
+            <width>450</width>
+            <height>80</height>
+            <itemgap>3</itemgap>
+            <aligny>bottom</aligny>
+            <align>center</align>
+            <orientation>horizontal</orientation>
+            <onup>6060</onup>
+            <ondown>6060</ondown>
+            <onleft>6060</onleft>
+            <onright>6060</onright>
+        <control type="button" id="122">
+            <include>ButtonFocusAnimation</include>
+			<font>font10</font>
+            <width>110</width>
+            <label>Hide</label>
+            <onclick>Action(Close)</onclick>
+            <onclick>dialog.close(all,true)</onclick>
+        </control>
+		<control type="button" id="1153">
+		    <include>ButtonFocusAnimation</include>
+			<font>font10</font>
+            <width>110</width>
+            <label>Watch</label>
+            <onclick>Action(Close)</onclick>
+            <onclick>dialog.close(all,true)</onclick>
+        </control>	
+		<control type="button" id="1152">
+			<include>ButtonFocusAnimation</include>
+			<font>font10</font>
+			<width>110</width>
+			<label>Record</label>
+			<onclick>Action(Close)</onclick>
+			<onclick>dialog.close(all,true)</onclick>
+        </control>
+		<control type="button" id="1154">
+		    <include>ButtonFocusAnimation</include>
+			<font>font10</font>
+            <width>110</width>
+            <label>Cancel</label>
+            <onclick>Action(Close)</onclick>
+            <onclick>dialog.close(all,true)</onclick>
+        </control>
+	</control>		
+ 	</control>		
+ </controls>
+</window>
