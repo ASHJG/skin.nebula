@@ -203,35 +203,6 @@
             <include>TextColor_AlternateColor</include>
             <label>$INFO[System.Time]</label>
         </control>
-       <!--  <control type="label">
-            <posx>1860</posx>
-            <posy>56</posy>
-            <height>30</height>
-            <width>50</width>
-            <align>right</align>
-            <font>NotificationFontDoubleAwesome</font>
-            <label></label>
-        </control>
-        <control type="label">
-            <visible>!VideoPlayer.HasEpg</visible>
-            <posx>1825</posx>
-            <posy>55</posy>
-            <height>30</height>
-            <width>300</width>
-            <align>right</align>
-            <font>NotificationFontDouble</font>
-            <label>$INFO[Player.TimeRemaining]</label>
-        </control>
-       <control type="label">
-            <visible>VideoPlayer.HasEpg</visible>
-            <posx>1825</posx>
-            <posy>55</posy>
-            <height>30</height>
-            <width>300</width>
-            <align>right</align>
-            <font>NotificationFontDouble</font>
-            <label>$INFO[PVR.EpgEventRemainingTime]</label>
-        </control>-->
         <control type="label">
             <visible>![!VideoPlayer.HasEpg+VideoPlayer.Content(livetv)]</visible>
             <posx>82</posx>
