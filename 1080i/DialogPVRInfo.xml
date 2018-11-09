@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog">
-    <defaultcontrol always="true">7</defaultcontrol>
+    <defaultcontrol>7</defaultcontrol>
     <controls>
         <include>DimBG</include>
         <control type="group">
@@ -8,41 +8,42 @@
             <control type="group">
                 <posy>-30</posy>
                 <include>DialogOpenClose</include>
+				<control type="label">
+                    <posx>60</posx>
+                    <posy>70</posy>
+                    <width>688</width>
+                    <height>78</height>
+                    <font>InfoDetailsFont</font>
+                    <include>TextColor_MainColor</include>
+                    <label>$INFO[ListItem.ChannelNumberLabel,, - ]$INFO[ListItem.ChannelName]</label>
+                </control>
                 <control type="image">
                     <posx>-200</posx>
                     <posy>240</posy>
                     <width>2320</width>
-                    <height>660</height>
+                    <height>760</height>
                     <include>DialogTransparency</include>
                     <texture border="150,40,150,40">$VAR[Theme.Color]/common/bg_dialog.png</texture>
                 </control>
                 <control type="image">
                     <posx>100</posx>
-                    <posy>232</posy>
+                    <posy>190</posy>
                     <width>1720</width>
                     <height>217</height>
                     <texture border="100">$VAR[Theme.Color]/common/bg_list.png</texture>
                 </control>
                 <control type="image">
                     <posx>100</posx>
-                    <posy>736</posy>
+                    <posy>836</posy>
                     <width>1720</width>
                     <height>172</height>
                     <texture border="100">$VAR[Theme.Color]/common/bg_list.png</texture>
                 </control>
                 <control type="image">
-                    <posx>25</posx>
-                    <posy>443</posy>
-                    <width>373</width>
-                    <height>300</height>
-                    <aspectratio>keep</aspectratio>
-                    <texture>$VAR[Thumbs]</texture>
-                </control>
-                <control type="image">
-                    <posx>25</posx>
-                    <posy>443</posy>
-                    <width>373</width>
-                    <height>300</height>
+                    <posx>10</posx>
+                    <posy>390</posy>
+                   <width>505</width>
+                   <height>475</height>
                     <aspectratio>keep</aspectratio>
                     <texture>$VAR[ThumbsBig]</texture>
                     <include>ThumbBorder</include>
@@ -50,7 +51,7 @@
                 <control type="label">
                     <animation effect="slide" start="0,0" end="0,-15" time="0" condition="!String.IsEmpty(ListItem.EpisodeName)">Conditional</animation>
                     <posx>TextMargin</posx>
-                    <posy>273</posy>
+                    <posy>253</posy>
                     <width>1800</width>
                     <height>135</height>
                     <align>center</align>
@@ -60,58 +61,42 @@
                 </control>
                 <control type="label">
                     <posx>TextMargin</posx>
-                    <posy>360</posy>
+                    <posy>325</posy>
                     <width>1800</width>
                     <height>35</height>
                     <align>center</align>
                     <font>InfoTitleSubFont</font>
-                    <include>TextColor_MainColor</include>
+				    <include>TextColor_MainColor</include>
                     <label>$INFO[ListItem.EpisodeName]</label>
                 </control>
-                <control type="label">
-                    <posx>423</posx>
-                    <posy>438</posy>
-                    <width>688</width>
-                    <height>78</height>
-                    <font>InfoDetailsFont</font>
+     			<control type="textbox" id="400">
+					<posx>500</posx>
+                    <posy>370</posy>
+                    <width>668</width>
+                    <height>500</height>
+					<font>InfoDetailsFont</font>
                     <include>TextColor_MainColor</include>
-                    <label>$INFO[ListItem.ChannelNumberLabel,, - ]$INFO[ListItem.ChannelName]</label>
-                </control>
-                <control type="label">
-                    <posx>423</posx>
-                    <posy>516</posy>
+					<label>$INFO[ListItem.Season,[COLOR grey]Season: [/COLOR]]$INFO[ListItem.Episode,[COLOR grey] Episode: [/COLOR],[CR]]$INFO[ListItem.StartTime,[COLOR grey]Starts: [/COLOR],]$INFO[ListItem.EndTime,[COLOR grey] Ends: [/COLOR],[CR]]$INFO[ListItem.Duration,[COLOR grey]$LOCALIZE[180]:[/COLOR] ,[CR]]$VAR[ExpirationDateTimeLabel]$INFO[ListItem.Genre,[COLOR grey]$LOCALIZE[515]:[/COLOR] ,[CR]]</label>
+				</control>
+				<control type="textbox" id="400">
+					<posx>500</posx>
+                    <posy>580</posy>
                     <width>688</width>
-                    <height>78</height>
-                    <font>InfoDetailsFont</font>
+                    <height>262</height>
+					<font>InfoDetailsFont</font>
                     <include>TextColor_MainColor</include>
-                    <label>$INFO[ListItem.StartTime,, / ]$INFO[ListItem.EndTime]</label>
-                </control>
-                <control type="label">
-                    <posx>423</posx>
-                    <posy>594</posy>
-                    <width>688</width>
-                    <height>78</height>
-                    <font>InfoDetailsFont</font>
-                    <include>TextColor_MainColor</include>
-                    <label>$INFO[ListItem.Genre]</label>
-                </control>
-                <control type="label">
-                    <posx>423</posx>
-                    <posy>672</posy>
-                    <width>688</width>
-                    <height>78</height>
-                    <font>InfoDetailsFont</font>
-                    <include>TextColor_MainColor</include>
-                    <label>$INFO[ListItem.Duration]</label>
-                </control>
+					<label>$INFO[ListItem.Writer,[COLOR grey]$LOCALIZE[20417]:[/COLOR] ,[CR]]$INFO[ListItem.Director,[COLOR grey]$LOCALIZE[20339]:[/COLOR] ,[CR]]$INFO[ListItem.Cast,[COLOR grey]$LOCALIZE[206]:[/COLOR] ,[CR]]</label>
+					<include>myautoscroll</include>
+				</control>
                 <control type="textbox">
-                    <posx>1171</posx>
-                    <posy>471</posy>
-                    <width>688</width>
-                    <height>249</height>
+                    <posx>1185</posx>
+                    <posy>370</posy>
+                    <width>720</width>
+                    <height>422</height>
                     <include>TextColor_MainColor</include>
                     <label>$INFO[ListItem.Plot]</label>
                     <pagecontrol>6060</pagecontrol>
+					<include>myautoscroll</include>
                 </control>
                 <control type="scrollbar" id="6060">
                     <visible>Skin.HasSetting(ManualScroll)</visible>
@@ -124,7 +109,7 @@
                 </control>
                 <control type="grouplist">
                     <posx>0</posx>
-                    <posy>777</posy>
+                    <posy>877</posy>
                     <width>1920</width>
                     <height>90</height>
                     <itemgap>30</itemgap>
@@ -144,18 +129,12 @@
                         <onclick>dialog.close(all,true)</onclick>
                         <onclick>RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[ListItem.Title])</onclick>
                     </control>
-                    <control type="button" id="4">
-                        <include>ButtonFocusAnimation</include>
-                        <width>348</width>
-                        <description>Find similar</description>
-                        <label>19003</label>
-                        <visible>Window.IsActive(PVRGuideInfo)</visible>
-                    </control>
+                
                     <control type="button" id="5">
                         <include>ButtonFocusAnimation</include>
                         <width>348</width>
                         <description>Switch to Channel</description>
-                        <label>19165</label>
+                        <label>Change</label>
                         <visible>Window.IsActive(PVRGuideInfo)</visible>
                     </control>
                     <control type="button" id="8">
@@ -163,8 +142,7 @@
                         <width>348</width>
                         <description>Play recording</description>
                         <label>19687</label>
-                        <visible>Window.IsActive(PVRGuideInfo)</visible>
-                    </control>
+                     </control>
                     <control type="button" id="6">
                         <include>ButtonFocusAnimation</include>
                         <width>348</width>
@@ -176,15 +154,26 @@
                         <include>ButtonFocusAnimation</include>
                         <width>348</width>
                         <description>Add Timer</description>
-                        <label>$LOCALIZE[19061]</label>
-                        <visible>Window.IsActive(PVRGuideInfo)</visible>
+                        <!--<label>$LOCALIZE[19061]</label>-->
+						<label>Record Series</label>
+						<visible>Window.IsActive(PVRGuideInfo)</visible>
                     </control>
-                    <control type="button" id="7">
+					<control type="button" id="11">
+						 <include>ButtonFocusAnimation</include>
+                        <width>348</width>
+                        <description>Add Timer</description>
+                        <!--<label>$LOCALIZE[19061]</label>-->
+						<label>$ADDON[service.kn.switchtimer 30040]</label>
+						<onclick>RunScript(service.kn.switchtimer,action=add,channel=$INFO[ListItem.ChannelName],icon=$INFO[ListItem.Icon],date=$INFO[ListItem.Date],title=$INFO[ListItem.Title])</onclick>
+						<visible>System.hasAddon(service.kn.switchtimer) + Window.IsActive(PVRGuideInfo)</visible>
+					</control>
+						<control type="button" id="7">
                         <width>180</width>
                         <include>ButtonFocusAnimation</include>
                         <description>OK</description>
-                        <label>186</label>
-                    </control>
+                        <label>Close</label>
+				    </control>
+				    
                 </control>
             </control>
         </control>
