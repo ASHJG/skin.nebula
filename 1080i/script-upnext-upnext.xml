@@ -20,7 +20,7 @@
 					<top>0</top>
 					<width>100%</width>
 					<height>181</height>
-					<texture colordiffuse="dd000000">bg.png</texture>
+					<texture colordiffuse="dd000000">white/common/bg_dialog.png</texture>
 				</control>
 				<!-- Thumb -->
 				<control type="group">
@@ -80,8 +80,8 @@
                         <righttexture></righttexture>
                         <overlaytexture></overlaytexture>
                         <lefttexture></lefttexture>
-                        <texturebg colordiffuse="00ffffff">white.jpg</texturebg>
-                        <midtexture colordiffuse="FFFF4081">white.jpg</midtexture>
+                        <texturebg colordiffuse="00ffffff">white/OSD/osd_progress_mini_empty.png</texturebg>
+                        <midtexture colordiffuse="FFFF4081">white/OSD/osd_progress_mini_mid.png</midtexture>
                     </control>
 				</control>
 				<!-- Labels -->
