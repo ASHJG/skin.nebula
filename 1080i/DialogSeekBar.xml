@@ -130,7 +130,7 @@
             <posx>-200</posx>
             <posy>0</posy>
             <width>2320</width>
-            <height>183</height>
+            <height>210</height>
             <!-- <colordiffuse>ddffffff</colordiffuse> -->
             <colordiffuse>$VAR[Picked.Theme.Color]</colordiffuse>
             <texture border="150,40,150,40">$VAR[Theme.Color]/common/bg_dialog.png</texture>
@@ -155,7 +155,7 @@
             <include>TopBarOSDVisibleFadeEffect</include>
             <visible>![window.IsVisible(videoosd)|window.IsVisible(musicosd)]</visible>
             <visible>!VideoPlayer.Content(livetv)</visible>
-            <animation effect="fade" time="250">Visible</animation>
+            <animation effect="fade" time="550">Visible</animation>
             <posx>300</posx>
             <posy>55</posy>
             <height>30</height>
@@ -185,7 +185,7 @@
         </control>
         <control type="label">
             <posx>TextMargin</posx>
-            <posy>97</posy>
+            <posy>90</posy>
             <height>41</height>
             <width>50</width>
             <align>left</align>
@@ -195,7 +195,7 @@
         </control>
         <control type="label">
             <posx>95</posx>
-            <posy>95</posy>
+            <posy>90</posy>
             <height>41</height>
             <width>300</width>
             <align>left</align>
@@ -203,7 +203,7 @@
             <include>TextColor_AlternateColor</include>
             <label>$INFO[System.Time]</label>
         </control>
-        <control type="label">
+       <!--  <control type="label">
             <posx>1860</posx>
             <posy>56</posy>
             <height>30</height>
@@ -222,7 +222,7 @@
             <font>NotificationFontDouble</font>
             <label>$INFO[Player.TimeRemaining]</label>
         </control>
-        <control type="label">
+       <control type="label">
             <visible>VideoPlayer.HasEpg</visible>
             <posx>1825</posx>
             <posy>55</posy>
@@ -231,11 +231,11 @@
             <align>right</align>
             <font>NotificationFontDouble</font>
             <label>$INFO[PVR.EpgEventRemainingTime]</label>
-        </control>
+        </control>-->
         <control type="label">
             <visible>![!VideoPlayer.HasEpg+VideoPlayer.Content(livetv)]</visible>
-            <posx>1860</posx>
-            <posy>97</posy>
+            <posx>82</posx>
+            <posy>130</posy>
             <height>41</height>
             <width>50</width>
             <align>right</align>
@@ -246,8 +246,8 @@
         <control type="label">
             <visible>!String.isempty(Player.Duration)</visible>
             <visible>Player.HasVideo + ![Player.HasGame | VideoPlayer.HasEpg]</visible>
-            <posx>1825</posx>
-            <posy>95</posy>
+            <posx>178</posx>
+            <posy>130</posy>
             <height>41</height>
             <width>300</width>
             <align>right</align>
@@ -257,8 +257,8 @@
         </control>
         <control type="label">
             <visible>VideoPlayer.HasEpg</visible>
-            <posx>1825</posx>
-            <posy>95</posy>
+            <posx>178</posx>
+            <posy>130</posy>
             <height>41</height>
             <width>300</width>
             <align>right</align>
@@ -266,6 +266,23 @@
             <include>TextColor_AlternateColor</include>
             <label>$INFO[PVR.EpgEventFinishTime]</label>
         </control>
+		<control type="image">
+            <posx>1700</posx>
+			<posy>42</posy>
+			<height>125</height>
+			<width>125</width>
+            <texture>timeshift.gif</texture>
+		    <visible>PVR.IsTimeShift</visible>
+        </control>
+			
+		<control type="label">
+			<posx>1718</posx>
+			<posy>75</posy>
+			<height>50</height>
+			<font>OSDTitleFont</font>
+			<label>$INFO[PVR.TimeshiftOffset]</label>
+			<visible>PVR.IsTimeShift</visible>
+		</control>
         <control type="group" id="22929">
             <visible>![Window.IsVisible(videoosd)|Window.IsVisible(musicosd)]</visible>
             <include>TopBarOSDVisibleFadeEffect</include>

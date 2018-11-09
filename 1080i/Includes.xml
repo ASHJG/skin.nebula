@@ -126,11 +126,7 @@
                 <colordiffuse>$VAR[Picked.Theme.Color]</colordiffuse>
                 <texture>special://skin/backgrounds/default/$VAR[Theme.Color].png</texture>
             </control>
-            <control type="label">
-                <include>DialogOpenCloseHeader</include>
-                <include>WindowTitle</include>
-                <label>$VAR[GlobalTitles]</label>
-            </control>
+
             <control type="label">
                 <include>DialogOpenCloseHeader</include>
                 <include>WindowTitleSub</include>
@@ -1159,7 +1155,7 @@
         <height>54</height>
     </include>
     <include name="myautoscroll">
-        <autoscroll delay="5000" time="2500" repeat="10000">true</autoscroll>
+        <autoscroll delay="10000" time="3500" repeat="10000">true</autoscroll>
     </include>
     <include name="rssTicker">
         <control type="group">

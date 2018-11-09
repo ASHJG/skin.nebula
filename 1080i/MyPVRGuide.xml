@@ -54,7 +54,6 @@
                                 <height>78</height>
                                 <posx>0</posx>
                                 <posy>0</posy>
-                                <texture></texture>
                             </control>
                             <control type="label" id="2">
                                 <posx>0</posx>
@@ -147,8 +146,8 @@
                                 <width>60</width>
                                 <height>78</height>
                                 <bordersize>0</bordersize>
-                                <texture border="3">$VAR[PVROverlayNoFocus]</texture>
-                            </control>
+								<texture>$VAR[Theme.Color]/common/bg_grid.png</texture>
+                        </control>
                             <control type="image">
                                 <animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
                                 <posx>0</posx>
@@ -221,20 +220,20 @@
                     </control>
                     <control type="image">
                         <include>ConditionWhite</include>
-                        <posx>47</posx>
-                        <posy>694</posy>
-                        <width>405</width>
-                        <height>375</height>
+                        <posx>10</posx>
+                        <posy>680</posy>
+                        <width>505</width>
+                        <height>475</height>
                         <aspectratio>keep</aspectratio>
                         <texture background="true" fallback="white/defaultChannelTvBig.png">$INFO[ListItem.Icon]</texture>
                         <include>ThumbBorder</include>
                     </control>
                     <control type="image">
                         <include>ConditionBlack</include>
-                        <posx>47</posx>
-                        <posy>694</posy>
-                        <width>405</width>
-                        <height>375</height>
+                        <posx>10</posx>
+                        <posy>680</posy>
+                        <width>505</width>
+                        <height>475</height>
                         <aspectratio>keep</aspectratio>
                         <texture background="true" fallback="black/defaultChannelTvBig.png">$INFO[ListItem.Icon]</texture>
                         <include>ThumbBorder</include>
@@ -250,7 +249,7 @@
                             <font>InfoTitleFont</font>
                             <include>TextColor_MainColor</include>
                             <scroll>false</scroll>
-                            <label>$INFO[ListItem.Label]</label>
+                            <label>$INFO[ListItem.Label] ($INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,]) </label>
                         </control>
                         <control type="image">
                             <description>Default Seperator</description>
@@ -260,40 +259,10 @@
                             <height>1</height>
                             <texture border="150,0,150,0">$VAR[Theme.Color]/list/bg_facade_separator.png</texture>
                         </control>
-                        <control type="label">
-                            <posx>500</posx>
-                            <posy>110</posy>
-                            <width>550</width>
-                            <height>71</height>
-                            <font>InfoDetailsFont</font>
-                            <include>TextColor_MainColor</include>
-                            <scroll>false</scroll>
-                            <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, / ,]</label>
-                        </control>
-                        <control type="label">
-                            <posx>500</posx>
-                            <posy>183</posy>
-                            <width>550</width>
-                            <height>71</height>
-                            <font>InfoDetailsFont</font>
-                            <include>TextColor_MainColor</include>
-                            <scroll>false</scroll>
-                            <label>$INFO[ListItem.Genre]</label>
-                        </control>
-                        <control type="label">
-                            <posx>500</posx>
-                            <posy>256</posy>
-                            <width>550</width>
-                            <height>71</height>
-                            <font>InfoDetailsFont</font>
-                            <include>TextColor_MainColor</include>
-                            <scroll>false</scroll>
-                            <label>$INFO[ListItem.Duration]</label>
-                        </control>
-                        <control type="textbox">
-                            <posx>1110</posx>
+                         <control type="textbox">
+                            <posx>510</posx>
                             <posy>125</posy>
-                            <width>760</width>
+                            <width>1200</width>
                             <height>208</height>
                             <font>InfoPlotFont</font>
                             <include>TextColor_MainColor</include>

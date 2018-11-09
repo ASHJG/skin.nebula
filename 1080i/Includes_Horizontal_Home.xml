@@ -122,13 +122,14 @@
                     </control>
                 </control>
                 <control type="group">
-                    <control type="list" id="300">
+                    <control type="wraplist" id="300">
                         <posx>0</posx>
                         <posy>284</posy>
                         <width>1920</width>
                         <height>360</height>
                         <onleft>300</onleft>
                         <onright>300</onright>
+						<focusposition>1</focusposition>
                         <onup>9001</onup>
                         <ondown condition="Skin.HasSetting(plexbmc)+!String.IsEmpty(Container(300).ListItem.Property(uuid))">900</ondown>
                         <ondown condition="String.IsEqual(Container(300).ListItem.Property(id),1)">700011</ondown>
@@ -182,7 +183,7 @@
                         <ondown condition="String.IsEqual(Container(300).ListItem.Property(id),49)">7000149</ondown>
                         <ondown condition="String.IsEqual(Container(300).ListItem.Property(id),50)">7000150</ondown>
                         <pagecontrol></pagecontrol>
-                        <!--<preloaditems>4</preloaditems>-->
+                        <preloaditems>4</preloaditems>
                         <orientation>horizontal</orientation>
                         <itemlayout height="360" width="565">
                             <control type="image">

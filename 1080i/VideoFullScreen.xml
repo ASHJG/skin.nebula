@@ -89,6 +89,7 @@
                 <include>TextColor_MainColor</include>
                 <label>$INFO[Player.CacheLevel, ,%]</label>
             </control>
+			
         </control>
     </controls>
 </window>

@@ -138,6 +138,7 @@
         <viewtype label="535">list</viewtype>
         <preloaditems>2</preloaditems>
         <pagecontrol>260</pagecontrol>
+		<focusposition>1</focusposition>
         <itemlayout height="360" width="565">
             <control type="image">
                 <visible>String.StartsWith(ListItem.Property(LabelID),weather)</visible>
