@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog">
-    <defaultcontrol>7</defaultcontrol>
+  <defaultcontrol always="true">9000</defaultcontrol>
     <controls>
         <include>DimBG</include>
         <control type="group">
@@ -107,7 +107,7 @@
                     <onleft>5</onleft>
                     <onright>5</onright>
                 </control>
-                <control type="grouplist">
+                <control type="grouplist" id="9000">>
                     <posx>0</posx>
                     <posy>877</posy>
                     <width>1920</width>
