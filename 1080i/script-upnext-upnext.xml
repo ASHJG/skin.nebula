@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+  <backgroundcolor>0</backgroundcolor>
 	<defaultcontrol always="true">3012</defaultcontrol>
 	<onload>Dialog.Close(fullscreeninfo,true)</onload>
 	<onload>Dialog.Close(videoosd,true)</onload>
@@ -20,12 +21,12 @@
 					<top>0</top>
 					<width>100%</width>
 					<height>181</height>
-					<texture colordiffuse="dd000000">white/common/bg_dialog.png</texture>
+					<texture>white/common/bg_dialog.png</texture>
 				</control>
 				<!-- Thumb -->
 				<control type="group">
 					<top>20</top>
-					<left>20</left>
+					<left>60</left>
 					<control type="image">
 						<top>-2</top>
 						<left>-2</left>
@@ -41,12 +42,10 @@
 					</control>
 					<control type="textbox">
 						<top>10</top>
-						<left>10</left>
+						<left>60</left>
 						<width>230</width>
 						<height>121</height>
-						<font>font12</font>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>00000000</shadowcolor>
+						<include>TextColor_MainColor</include>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[Window.Property(tvshowtitle)]</label>
@@ -80,23 +79,22 @@
                         <righttexture></righttexture>
                         <overlaytexture></overlaytexture>
                         <lefttexture></lefttexture>
-                        <texturebg colordiffuse="00ffffff">white/OSD/osd_progress_mini_empty.png</texturebg>
-                        <midtexture colordiffuse="FFFF4081">white/OSD/osd_progress_mini_mid.png</midtexture>
+                        <texturebg colordiffuse="00ffffff">$VAR[Theme.Color]/OSD/osd_progress_mini_empty.png</texturebg>
+                        <midtexture colordiffuse="FFFF4081">$VAR[Theme.Color]/OSD/osd_progress_mini_mid.png</midtexture>
                     </control>
 				</control>
 				<!-- Labels -->
 				<control type="group">
 					<top>20</top>
-					<left>290</left>
+					<left>330</left>
 					<right>20</right>
 					<!-- Time -->
 					<control type="label">
 						<width>auto</width>
 						<height>35</height>
 						<aligny>center</aligny>
-						<font>font25_title</font>
-						<textcolor>eeffffff</textcolor>
-						<shadowcolor>00000000</shadowcolor>
+						<font>font13_title</font>
+						<include>TextColor_MainColor</include>
 						<label>$ADDON[service.upnext 30008] $ADDON[service.upnext 30036] [COLOR FFFF4081]$INFO[Player.TimeRemaining(ss),,][/COLOR] $ADDON[service.upnext 30035]</label>
 					</control>
 					<!-- Details -->
@@ -110,8 +108,7 @@
 							<height>35</height>
 							<aligny>center</aligny>
 							<font>font12</font>
-							<textcolor>eeffffff</textcolor>
-							<shadowcolor>00000000</shadowcolor>
+							<include>TextColor_MainColor</include>
 							<label>$INFO[Window.Property(tvshowtitle),, - ]$INFO[Window.Property(season),S,]$INFO[Window.Property(episode),E, - ]$INFO[Window.Property(title)]   </label>
 							<visible>!String.IsEmpty(Window.Property(title))</visible>
 						</control>
@@ -120,17 +117,15 @@
 							<height>35</height>
 							<aligny>center</aligny>
 							<font>font12</font>
-							<textcolor>eeffffff</textcolor>
-							<shadowcolor>00000000</shadowcolor>
+							<include>TextColor_MainColor</include>
 							<label>$INFO[Window.Property(year),,   ]</label>
 							<visible>!String.IsEmpty(Window.Property(year))</visible>
 						</control>
 						<control type="image">
-							<width>19</width>
-							<height>19</height>
+							<width>33</width>
+							<height>33</height>
 							<aspect>keep</aspect>
-							<texture colordiffuse="FFFF4081">star.png</texture>
-							<animation effect="slide" end="0,8" time="0" condition="true">Conditional</animation>
+							<texture>$VAR[Theme.Color]/badges/rating.png</texture>
 							<visible>!String.IsEmpty(Window.Property(rating))</visible>
 						</control>
 						<control type="label">
@@ -139,8 +134,7 @@
 							<aligny>center</aligny>
 							<label>$INFO[Window.Property(rating), ,   ]</label>
 							<font>font12</font>
-							<textcolor>eeffffff</textcolor>
-							<shadowcolor>00000000</shadowcolor>
+							<include>TextColor_MainColor</include>
 							<visible>!String.IsEmpty(Window.Property(rating))</visible>
 						</control>
 					</control>
@@ -149,42 +143,20 @@
 						<orientation>horizontal</orientation>
 						<height>56</height>
 						<bottom>20</bottom>
-						<itemgap>10</itemgap>
+						<itemgap>5</itemgap>
 						<control type="button" id="3012">
-							<label>    $ADDON[service.upnext 30006]</label>
+						<include>ButtonFocusAnimation</include>
+							<label>$ADDON[service.upnext 30006]</label>
 							<height>56</height>
-							<width min="50">auto</width>
-							<font>font20_title</font>
-							<textoffsetx>55</textoffsetx>
-							<textcolor>ddffffff</textcolor>
-							<focusedcolor>eeffffff</focusedcolor>
-							<selectedcolor>ddffffff</selectedcolor>
-							<shadowcolor>22000000</shadowcolor>
-							<aligny>center</aligny>
-							<align>center</align>
-							<texturefocus border="10" colordiffuse="FF172A91">button.png</texturefocus>
-							<texturenofocus border="10" colordiffuse="FF212121">button.png</texturenofocus>
-							<alttexturefocus border="10" colordiffuse="FF172A91">button.png</alttexturefocus>
-							<alttexturenofocus border="10" colordiffuse="FF212121">button.png</alttexturenofocus>
-							<pulseonselect>no</pulseonselect>
+							<width>170</width>
+							<font>font12</font>
 						</control>
 						<control type="button" id="3013">
+						  <include>ButtonFocusAnimation</include>
 							<label>$ADDON[service.upnext 30034]</label>
 							<height>56</height>
-							<width min="50">auto</width>
-							<font>font20_title</font>
-							<textoffsetx>15</textoffsetx>
-							<textcolor>ddffffff</textcolor>
-							<focusedcolor>eeffffff</focusedcolor>
-							<selectedcolor>ddffffff</selectedcolor>
-							<shadowcolor>22000000</shadowcolor>
-							<aligny>center</aligny>
-							<align>center</align>
-							<texturefocus border="10" colordiffuse="FF172A91">button.png</texturefocus>
-							<texturenofocus border="10" colordiffuse="FF212121">button.png</texturenofocus>
-							<alttexturefocus border="10" colordiffuse="FF172A91">button.png</alttexturefocus>
-							<alttexturenofocus border="10" colordiffuse="FF212121">button.png</alttexturenofocus>
-							<pulseonselect>no</pulseonselect>
+							<width>170</width>
+							<font>font12</font>
 						</control>
 					</control>
 					<control type="image">
