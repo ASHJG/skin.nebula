@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+  <backgroundcolor>0</backgroundcolor>
     <defaultcontrol always="true">3012</defaultcontrol>
     <onload>Dialog.Close(fullscreeninfo,true)</onload>
     <onload>Dialog.Close(videoosd,true)</onload>
@@ -20,64 +21,43 @@
                     <top>0</top>
                     <width>100%</width>
                     <height>80</height>
-                    <texture colordiffuse="dd000000">bg.png</texture>
+                    <texture>$VAR[Theme.Color]/common/bg_dialog.png</texture>
                 </control>
                 <control type="group">
-                    <top>12</top>
-                    <left>20</left>
+                    <top>10</top>
+                    <left>30</left>
                     <width>75%</width>
                     <!-- buttons -->
                     <control type="grouplist">
+					<control type="label">
+							<left>25</left>
+							<align>right</align>
+                            <width>145</width>
+                            <height>56</height>
+                            <font>font12</font>
+                            <include>TextColor_MainColor</include>
+                            <shadowcolor>00000000</shadowcolor>
+                            <label>[CAPITALIZE]$ADDON[service.upnext 30024][/CAPITALIZE]</label>
+                        </control>
                         <orientation>horizontal</orientation>
                         <height>56</height>
                         <itemgap>10</itemgap>
                         <align>left</align>
                         <control type="button" id="3012">
                             <label>    $ADDON[service.upnext 30010] $ADDON[service.upnext 30036] [COLOR FFFF4081]$INFO[Player.TimeRemaining(ss),,][/COLOR] $ADDON[service.upnext 30035]</label>
-                            <height>56</height>
-                            <width min="50">auto</width>
-                            <font>font20_title</font>
-                            <textoffsetx>55</textoffsetx>
-                            <textcolor>ddffffff</textcolor>
-                            <focusedcolor>eeffffff</focusedcolor>
-                            <selectedcolor>ddffffff</selectedcolor>
-                            <shadowcolor>22000000</shadowcolor>
-                            <aligny>center</aligny>
-                            <align>center</align>
-                            <texturefocus border="10" colordiffuse="FF172A91">button.png</texturefocus>
-                            <texturenofocus border="10" colordiffuse="FF212121">button.png</texturenofocus>
-                            <alttexturefocus border="10" colordiffuse="FF172A91">button.png</alttexturefocus>
-                            <alttexturenofocus border="10" colordiffuse="FF212121">button.png</alttexturenofocus>
-                            <pulseonselect>no</pulseonselect>
+							<height>56</height>
+							<width>480</width>
+                            <font>font12</font>
+                            
                         </control>
                         <control type="button" id="3013">
                             <label>$ADDON[service.upnext 30034]</label>
-                            <height>56</height>
-                            <width min="50">auto</width>
-                            <font>font20_title</font>
-                            <textoffsetx>15</textoffsetx>
-                            <textcolor>ddffffff</textcolor>
-                            <focusedcolor>eeffffff</focusedcolor>
-                            <selectedcolor>ddffffff</selectedcolor>
-                            <shadowcolor>22000000</shadowcolor>
-                            <aligny>center</aligny>
-                            <align>center</align>
-                            <texturefocus border="10" colordiffuse="FF172A91">button.png</texturefocus>
-                            <texturenofocus border="10" colordiffuse="FF212121">button.png</texturenofocus>
-                            <alttexturefocus border="10" colordiffuse="FF172A91">button.png</alttexturefocus>
-                            <alttexturenofocus border="10" colordiffuse="FF212121">button.png</alttexturenofocus>
-                            <pulseonselect>no</pulseonselect>
+							<height>56</height>
+							<width>170</width>
+							<font>font12</font>
                         </control>
                         <!-- Label -->
-                        <control type="label">
-                            <width>auto</width>
-                            <height>56</height>
-                            <aligny>center</aligny>
-                            <font>font32_title</font>
-                            <textcolor>eeffffff</textcolor>
-                            <shadowcolor>00000000</shadowcolor>
-                            <label>[CAPITALIZE]$ADDON[service.upnext 30024][/CAPITALIZE]</label>
-                        </control>
+                        
                     </control>
                     <control type="image">
                         <width>46</width>
