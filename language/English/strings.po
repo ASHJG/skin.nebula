@@ -581,6 +581,10 @@ msgctxt "#31395"
 msgid "Arial (Regular)"
 msgstr ""
 
+msgctxt "#31398"
+msgid "Larget Text"
+msgstr ""
+
 msgctxt "#31396"
 msgid "Ubuntu (Light)"
 msgstr ""
