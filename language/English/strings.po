@@ -582,7 +582,7 @@ msgid "Arial (Regular)"
 msgstr ""
 
 msgctxt "#31398"
-msgid "Larget Text"
+msgid "Larger Text"
 msgstr ""
 
 msgctxt "#31396"
