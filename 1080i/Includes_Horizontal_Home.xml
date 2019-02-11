@@ -185,11 +185,11 @@
                         <pagecontrol></pagecontrol>
                         <preloaditems>4</preloaditems>
                         <orientation>horizontal</orientation>
-                        <itemlayout height="360" width="565">
+                        <itemlayout height="360" width="635">
                             <control type="image">
-                                <posx>30</posx>
+                                <posx>25</posx>
                                 <posy>0</posy>
-                                <width>585</width>
+                                <width>670</width>
                                 <height>360</height>
                                 <texture background="true" fallback="special://skin/backgrounds/default/default.jpg">$INFO[ListItem.Icon]</texture>
                                 <aspectratio>scale</aspectratio>
